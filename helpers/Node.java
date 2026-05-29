@@ -1,9 +1,9 @@
 package helpers;
 
 public class Node {
-    int key;
-    int value;
-    int freq;
+    public int key;
+    public int value;
+    public int freq;
 
     Node prev;
     Node next;
@@ -13,4 +13,6 @@ public class Node {
         this.value = value;
         this.freq = 1;
     }
+
+
 }

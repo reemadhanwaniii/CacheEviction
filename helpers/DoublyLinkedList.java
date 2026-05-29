@@ -5,7 +5,7 @@ package helpers;
 public class DoublyLinkedList {
     Node head;
     Node tail;
-    int size;
+    public int size;
 
     public DoublyLinkedList() {
         this.head = new Node(-1,-1);
@@ -31,11 +31,14 @@ public class DoublyLinkedList {
         node.next = temp;
         node.prev = head;
         head.next = node;
+
+        size++;
     }
 
     public int removeAtTail() {
         Node node  = tail.prev;
         remove(node);
+        size--;
         return  node.value;
     }
 }
