@@ -41,6 +41,10 @@ public class LIFOCache implements CacheStrategy{
 
     @Override
     public int get(int key) {
-        return 0;
+
+        if(!cache.containsKey(key)) return -1;
+
+        Node node = cache.get(key);
+        return node.value;
     }
 }
