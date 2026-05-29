@@ -8,9 +8,9 @@ import java.util.Map;
 
 public class FIFOCache implements CacheStrategy{
 
-    int capacity;
-    Map<Integer, Node> cache;
-    DoublyLinkedList list;
+    private final int capacity;
+    private final Map<Integer, Node> cache;
+    private final DoublyLinkedList list;
 
     public FIFOCache(int capacity) {
         this.capacity = capacity;
