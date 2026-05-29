@@ -41,4 +41,21 @@ public class DoublyLinkedList {
         size--;
         return  node.value;
     }
+
+    public void addAtTail(Node node) {
+        Node temp = tail.prev;
+        temp.next = node;
+        node.next = tail;
+        node.prev = temp;
+        tail.prev = node;
+
+        size++;
+    }
+
+    public int removeAtHead() {
+        Node node = head.next;
+        remove(node);
+        size--;
+        return node.value;
+    }
 }
